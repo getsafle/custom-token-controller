@@ -1,12 +1,13 @@
 const Web3 = require('web3');
 const SINGLE_CALL_BALANCES_ABI = require('./constants/abi/single-call-balance-checker-abi');
 const ERC20_TOKEN_CONTRACT_ABI = require('./constants/abi/erc-20-token-contract-abi')
-const { SINGLE_CALL_BALANCES_ADDRESS } = require('./config');
+const helper = require('./utils/helper');
 
 class CustomTokenController {
-    constructor({ rpcURL, userAddress }) {
+    constructor({ rpcURL, userAddress, chain }) {
         this.userAddress = userAddress,
-            this.rpcURL = rpcURL;
+        this.rpcURL = rpcURL;
+        this.chain = chain;
         this.web3 = new Web3(new Web3.providers.HttpProvider(this.rpcURL));
     }
 
@@ -24,6 +25,7 @@ class CustomTokenController {
     }
 
     async getTokenBalance(contractAddress) {
+        const { SINGLE_CALL_BALANCES_ADDRESS } = await helper.getcontractAddress(this.chain);
         const ethContract = new this.web3.eth.Contract(SINGLE_CALL_BALANCES_ABI, SINGLE_CALL_BALANCES_ADDRESS);
         try {
             const balance = await ethContract.methods.balances([this.userAddress], [contractAddress]).call();
