@@ -21,10 +21,11 @@ Import the package into your project using,
 
 Initialise the constructor using,
 
-`const tokenController = new safleTokenController.CustomTokenController({userAddress, rpcURL});`
+`const tokenController = new safleTokenController.CustomTokenController({userAddress, rpcURL, chain});`
 
 * `userAddress` - User Public Address
 * `rpcURL` - Web3 RPC provider URL
+* `chain` - blockchain name
 
 > Methods
 
