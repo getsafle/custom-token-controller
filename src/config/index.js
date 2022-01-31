@@ -1,3 +1,4 @@
 module.exports = {
-    SINGLE_CALL_BALANCES_ADDRESS: '0xb1f8e55c7f64d203c1400b9d8555d050f94adf39',
-};
+    CONTRACT_DATA_URL: "https://gist.githubusercontent.com/getsafle-org/27e94f7c402b6979c91de212f53446f2/raw/4ad077418789b8d5c3941b85048508f061754126/multichain.json",
+  };
+  
