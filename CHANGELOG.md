@@ -14,3 +14,7 @@
 ### 1.0.3 (2022-01-25)
 
 * Updated controller to handle assets on multiple chains
+
+### 1.0.4 (2022-02-29)
+
+* Updated token metadata URL
