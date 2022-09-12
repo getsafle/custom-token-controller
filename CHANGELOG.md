@@ -18,3 +18,7 @@
 ### 1.0.4 (2022-02-29)
 
 * Updated token metadata URL
+
+### 1.0.5 (2022-09-12)
+
+* Updated the README file with the latest functional & non-functional documentation.
