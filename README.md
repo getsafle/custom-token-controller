@@ -1,42 +1,51 @@
-# **Safle Custom Token Controller**
+# Custom Token Controller
 
-Safle Custom Token Controller SDK
+This SDK can be used to get the details of any token by it's contract address and it's balance for a specific address.
 
+## Installation
 
-## **Installation and Usage**
+To install this SDK,
 
-> Installation
+```sh
+npm install --save @getsafle/custom-token-controller
+```
 
-Install the package by running the command,
+## Initialization
 
-`npm install @getsafle/custom-token-controller`
+Initialize the constructor,
 
-Import the package into your project using,
+```js
+const safleTokenController = require('@getsafle/custom-token-controller');
 
-`const safleTokenController = require('@getsafle/custom-token-controller');`
-
-## **Custom Token Controller**
-
-> Initialising
-
-Initialise the constructor using,
-
-`const tokenController = new safleTokenController.CustomTokenController({userAddress, rpcURL, chain});`
+const tokenController = new safleTokenController.CustomTokenController({ userAddress, rpcURL, chain });
+```
 
 * `userAddress` - User Public Address
 * `rpcURL` - Web3 RPC provider URL
 * `chain` - blockchain name
 
-> Methods
+<br>
 
-Get Token Details
+> Get Token Details
 
-`const tokenDetails = await tokenController.getTokenDetails(contractAddress)`
+<br>
+
+This function returns the token decimal and symbol for the contract address passed as parameter.
+
+```js
+const tokenDetails = await tokenController.getTokenDetails(contractAddress);
+```
 
 * `contractAddress` - Token contract address
 
-Get Token Balance
+<br>
 
-`const tokenDetails = await tokenController.getTokenBalance(contractAddress)`
+> Get Token Balance
+
+<br>
+
+```js
+const tokenDetails = await tokenController.getTokenBalance(contractAddress);
+```
 
 * `contractAddress` - Token contract address
