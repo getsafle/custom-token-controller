@@ -3,9 +3,19 @@ const axios = require('axios');
 const { INVALID_CHAIN_SELECTED } = require('../constants/responses');
 
 const getcontractAddress = async (chain) => {
-    const { response } = await getRequest({ url: config.CONTRACT_DATA_URL });
+    let output;
 
-    const { supportedChains, chains } = response;
+    const { response, error } = await getRequest({ url: config.CONTRACT_DATA_URL });
+
+    if (error) {
+        const { response } = await helper.getRequest({ url: config.FALLBACK_CONTRACT_DATA_URL });
+
+        output = response;
+    } else {
+        output = response;
+    }
+
+    const { supportedChains, chains } = output;
 
     if (!supportedChains.includes(chain)) {
         return { error: INVALID_CHAIN_SELECTED };

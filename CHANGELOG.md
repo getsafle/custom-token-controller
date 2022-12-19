@@ -22,3 +22,7 @@
 ### 1.0.5 (2022-09-12)
 
 * Updated the README file with the latest functional & non-functional documentation.
+
+### 1.0.6 (2022-12-19)
+
+* Added a fallback API to get the list of assets
