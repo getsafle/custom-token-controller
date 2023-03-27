@@ -26,3 +26,7 @@
 ### 1.0.6 (2022-12-19)
 
 * Added a fallback API to get the list of assets
+
+### 1.0.7 (2023-03-27)
+
+* Update getcontractAddress method to call fallback API after 3 seconds if there is no response from main API
