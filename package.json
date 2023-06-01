@@ -1,6 +1,6 @@
 {
   "name": "@getsafle/custom-token-controller",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "",
   "main": "src/index.js",
   "scripts": {
@@ -25,7 +25,7 @@
       "email": "arjun@getsafle.com"
     }
   ],
-  "license": "ISC",
+  "license": "MIT",
   "homepage": "https://github.com/getsafle/custom-token-controller#readme",
   "dependencies": {
     "axios": "^0.25.0",
