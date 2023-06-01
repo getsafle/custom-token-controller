@@ -30,3 +30,6 @@
 ### 1.0.7 (2023-03-27)
 
 * Update getcontractAddress method to call fallback API after 3 seconds if there is no response from main API
+### 1.0.8 (2023-06-01)
+
+* Updated metadata URL's
